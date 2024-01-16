@@ -25,6 +25,7 @@ public class ReviewController {
 
     @GetMapping()
     public ResponseEntity<List<Review>> getAllReviews() {
+        //asdasdfmdsfdfsa
         List<Review> reviews = repository.findAll();
         return new ResponseEntity<>(reviews, HttpStatus.OK);
     }
