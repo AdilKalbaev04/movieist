@@ -38,4 +38,14 @@ public class ReviewService {
             repository.delete(review);
         });
     }
+    public Review updateReview(ObjectId id, String reviewBody) {
+        Optional<Review> optionalReview = repository.findById(id);
+        if (optionalReview.isPresent()) {
+            Review existingReview = optionalReview.get();
+            existingReview.setBody(reviewBody);
+            existingReview.setUpdated(LocalDateTime.now());
+            return repository.save(existingReview);
+        }
+        return null;
+    }
 }

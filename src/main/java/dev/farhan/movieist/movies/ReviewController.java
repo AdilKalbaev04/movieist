@@ -39,4 +39,14 @@ public class ReviewController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+    @PutMapping("/{id}")
+    public ResponseEntity<Review> updateReview(@PathVariable ObjectId id, @RequestBody Map<String, String> payload) {
+        String reviewBody = payload.get("reviewBody");
+        Review updatedReview = service.updateReview(id, reviewBody);
+        if (updatedReview != null) {
+            return new ResponseEntity<>(updatedReview, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 }
