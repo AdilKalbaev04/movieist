@@ -15,11 +15,13 @@ import java.time.LocalDateTime;
 public class Review {
     @Id
     private String id;
+    private String userId;
     private String body;
     private LocalDateTime created;
     private LocalDateTime updated;
 
-    public Review(String body, LocalDateTime created, LocalDateTime updated) {
+    public Review(String userId, String body, LocalDateTime created, LocalDateTime updated) {
+        this.userId = userId;
         this.body = body;
         this.created = created;
         this.updated = updated;

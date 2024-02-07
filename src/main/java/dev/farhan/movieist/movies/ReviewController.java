@@ -21,7 +21,8 @@ public class ReviewController {
 
     @PostMapping()
     public ResponseEntity<Review> createReview(@RequestBody Map<String, String> payload) {
-        return new ResponseEntity<>(service.createReview(payload.get("reviewBody"), payload.get("imdbId")), HttpStatus.OK);
+        String userId = payload.get("userId");
+        return new ResponseEntity<>(service.createReview(userId, payload.get("reviewBody"), payload.get("imdbId")), HttpStatus.OK);
     }
 
     @GetMapping()
@@ -41,8 +42,9 @@ public class ReviewController {
     }
     @PutMapping("/{id}")
     public ResponseEntity<Review> updateReview(@PathVariable ObjectId id, @RequestBody Map<String, String> payload) {
+        String userId = payload.get("userId");
         String reviewBody = payload.get("reviewBody");
-        Review updatedReview = service.updateReview(id, reviewBody);
+        Review updatedReview = service.updateReview(id, userId, reviewBody);
         if (updatedReview != null) {
             return new ResponseEntity<>(updatedReview, HttpStatus.OK);
         } else {

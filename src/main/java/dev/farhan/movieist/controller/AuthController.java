@@ -12,17 +12,21 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthController {
 
     private final UserService userService;
+    private final UserActivityService userActivityService;
 
     @Autowired
-    public AuthController(UserService userService) {
+    public AuthController(UserService userService, UserActivityService userActivityService) {
         this.userService = userService;
+        this.userActivityService = userActivityService;
     }
 
     @PostMapping("/login")
     public String login(@RequestBody LoginRequest request) {
         String token = JwtUtil.generateToken(request.getUsername());
+        userActivityService.trackActivity(request.getUsername(), "User logged in");
         return token;
     }
+
 
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody RegisterRequest request) {
