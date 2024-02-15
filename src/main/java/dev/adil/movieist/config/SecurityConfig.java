@@ -19,10 +19,8 @@ public class SecurityConfig {
         http
                 .cors().and()
                 .csrf().disable()
-                .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/login", "/token", "/register", "/api/v1/movies", "/api/v1/movies/{imdbId}", "/api/v1/reviews", "/api/v1/reviews/{id}").permitAll()
-                        .anyRequest().authenticated()
-                );
+                .authorizeHttpRequests()
+                .anyRequest().permitAll();
         return http.build();
     }
 }
