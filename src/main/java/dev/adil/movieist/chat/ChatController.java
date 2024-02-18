@@ -25,7 +25,7 @@ public class ChatController {
     public ChatMessageEntity addUser(@Payload ChatMessage chatMessage) {
         return processMessage(chatMessage);
     }
-
+//
     private ChatMessageEntity processMessage(ChatMessage chatMessage) {
         if (chatMessage.getType() != null && chatMessage.getContent() != null && chatMessage.getSender() != null) {
             ChatMessageEntity entity = new ChatMessageEntity();
