@@ -1,4 +1,4 @@
-package dev.adil.movieist.controller;
+package dev.adil.movieist.entity;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

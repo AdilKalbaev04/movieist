@@ -1,5 +1,6 @@
-package dev.adil.movieist.controller;
+package dev.adil.movieist.service;
 
+import dev.adil.movieist.model.RegisterRequest;
 import org.springframework.security.core.userdetails.UserDetails;
 
 public interface UserService {

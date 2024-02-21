@@ -1,6 +1,8 @@
-package dev.adil.movieist.movies;
+package dev.adil.movieist.service;
 
-import dev.adil.movieist.controller.UserActivityService;
+import dev.adil.movieist.entity.Movie;
+import dev.adil.movieist.entity.Review;
+import dev.adil.movieist.repository.ReviewRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;

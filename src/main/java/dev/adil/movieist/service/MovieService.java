@@ -1,5 +1,7 @@
-package dev.adil.movieist.movies;
+package dev.adil.movieist.service;
 
+import dev.adil.movieist.entity.Movie;
+import dev.adil.movieist.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

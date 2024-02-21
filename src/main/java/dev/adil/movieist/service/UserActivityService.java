@@ -1,10 +1,12 @@
-package dev.adil.movieist.controller;
+package dev.adil.movieist.service;
 
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 
+import dev.adil.movieist.entity.UserActivity;
+import dev.adil.movieist.repository.UserActivityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,5 +1,6 @@
-package dev.adil.movieist.controller;
+package dev.adil.movieist.repository;
 
+import dev.adil.movieist.entity.UserActivity;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;

@@ -1,5 +1,9 @@
 package dev.adil.movieist.controller;
 
+import dev.adil.movieist.model.LoginRequest;
+import dev.adil.movieist.model.RegisterRequest;
+import dev.adil.movieist.service.UserActivityService;
+import dev.adil.movieist.service.UserService;
 import dev.adil.movieist.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package dev.adil.movieist.controller;
+package dev.adil.movieist.model;
 
 import lombok.Getter;
 import lombok.Setter;

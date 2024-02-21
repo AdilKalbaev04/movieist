@@ -1,5 +1,6 @@
-package dev.adil.movieist.movies;
+package dev.adil.movieist.repository;
 
+import dev.adil.movieist.entity.Movie;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;

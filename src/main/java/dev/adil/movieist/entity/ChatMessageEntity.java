@@ -1,5 +1,6 @@
-package dev.adil.movieist.chat;
+package dev.adil.movieist.entity;
 
+import dev.adil.movieist.model.MessageType;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

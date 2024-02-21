@@ -1,7 +1,7 @@
 package dev.adil.movieist.config;
 
-import dev.adil.movieist.chat.ChatMessage;
-import dev.adil.movieist.chat.MessageType;
+import dev.adil.movieist.model.ChatMessage;
+import dev.adil.movieist.model.MessageType;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;

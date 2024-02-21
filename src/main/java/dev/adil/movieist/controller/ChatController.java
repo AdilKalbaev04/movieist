@@ -1,5 +1,8 @@
-package dev.adil.movieist.chat;
+package dev.adil.movieist.controller;
 
+import dev.adil.movieist.model.ChatMessage;
+import dev.adil.movieist.entity.ChatMessageEntity;
+import dev.adil.movieist.repository.ChatMessageRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
@@ -25,7 +28,7 @@ public class ChatController {
     public ChatMessageEntity addUser(@Payload ChatMessage chatMessage) {
         return processMessage(chatMessage);
     }
-//
+
     private ChatMessageEntity processMessage(ChatMessage chatMessage) {
         if (chatMessage.getType() != null && chatMessage.getContent() != null && chatMessage.getSender() != null) {
             ChatMessageEntity entity = new ChatMessageEntity();

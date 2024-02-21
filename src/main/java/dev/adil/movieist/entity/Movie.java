@@ -1,4 +1,4 @@
-package dev.adil.movieist.movies;
+package dev.adil.movieist.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,5 +1,7 @@
-package dev.adil.movieist.movies;
+package dev.adil.movieist.controller;
 
+import dev.adil.movieist.entity.Movie;
+import dev.adil.movieist.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

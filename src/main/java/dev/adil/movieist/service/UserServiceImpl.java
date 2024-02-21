@@ -1,6 +1,7 @@
-package dev.adil.movieist.controller;
+package dev.adil.movieist.service;
 
-import dev.adil.movieist.model.UserEntity;
+import dev.adil.movieist.model.RegisterRequest;
+import dev.adil.movieist.entity.UserEntity;
 import dev.adil.movieist.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.User;

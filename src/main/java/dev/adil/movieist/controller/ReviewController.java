@@ -1,5 +1,8 @@
-package dev.adil.movieist.movies;
+package dev.adil.movieist.controller;
 
+import dev.adil.movieist.entity.Review;
+import dev.adil.movieist.service.ReviewService;
+import dev.adil.movieist.repository.ReviewRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

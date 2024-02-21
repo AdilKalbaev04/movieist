@@ -1,4 +1,4 @@
-package dev.adil.movieist.chat;
+package dev.adil.movieist.model;
 
 import lombok.*;
 
